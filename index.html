@@ -8,7 +8,7 @@
   </head>
 <body>
     <h1>Prompttechnieken</h1>
-    <h2><strong>1. Zero-shot prompting</strong></h2>
+    <h2>1. Zero-shot prompting</h2>
 <p>Geef <strong>geen</strong> voorbeelden mee in je prompt.  Geschikt voor:</p>
 <ul>
       <li> Eenvoudige vragen</li>
@@ -16,16 +16,55 @@
       <li> Samenvattingen</li>
       <li> Tekst die niet hoeft te voldoen aan bepaalde toon of stijl.</li>
     </ul>
-  <p>Voorbeeldprompt:</p>
-  <p> <span class="tekstIsCode">Wat is de hoofdstad van België?</span></p>
+  <p>Voorbeeldprompt:<br>
+<span class="tekstIsCode">Wat is de hoofdstad van België?</span></p>
 <p>&nbsp;</p>
   <h2>2. One-shot prompting</h2> 
-  <p>Geef één voorbeeld mee in je prompt door middel van input-output paren of een beschrijving. </p>
-  <p>Voorbeeldprompt: </p>
-  <p class="tekstIsCode">Input: Wat is de hoofdstad van België? <br>
+  <p>Geef <strong>één voorbeeld mee</strong> in je prompt door middel van input-output paren of een beschrijving. </p>
+  <p>Voorbeeldprompt:<br>
+    <span class="tekstIsCode">Input: Wat is de hoofdstad van België? <br>
   Output: Brussel, de stad van de spruitjes! <br>
   Input: Wat is de hoofdstad van Duitsland? <br>
-  Output: </p>
+  Output: </span></p>
+  <p class="tekstIsCode">&nbsp;</p>
+  <h2>3. Few-shot  prompting</h2>
+  <p>Geef <strong>twee of meer</strong> voorbeelden mee in je prompt door middel  van input-output paren of meerdere beschrijvingen.<br>
+    <br>
+    Voorbeeldprompt:<br>
+    <span class="tekstIsCode">  Input: Wat is de hoofdstad van Brussel?<br>
+  Output: Brussel, de stad van de spruitjes!<br>
+  Input: Wat is de hoofdstad van Frankrijk?<br>
+  Output: Parijs, de stad van de liefde!<br>
+  Input: Wat is de hoofdstad van Italië?<br>
+  Output</span>: </p>
+<p>&nbsp;</p>
+  <h2>4. Chain-of-thought  prompting</h2>
+  <p>Laat het taalmodel <strong>stap-voor-stap beschrijven</strong> hoe het tot  zijn antwoord komt. Handig voor berekeningen of logisch redeneren.</p>
+<p>    Voorbeeldprompt: <br>
+  <span class="tekstIsCode">#Vraag<br>
+  Leg stap-voor-stap uit  hoe je tot het antwoord komt.<br>
+  <br>
+  #Vraag
+  <br>
+Ik snap niets van tweedegraagdsvergelijkingen. De vergelijking  (x maal x) min 4 maal x plus 4 is gelijk aan nul zegt mijn leraar wanneer x gelijk is aan 2. Leg het uit want morgen heb ik een toets.</span></p>
+<p>&nbsp;</p>
+<h2><strong>5. Cognitive  verifier of Socrates</strong></h2>
+<p>  Laat het taalmodel vragen stellen om tot een weloverwogen antwoord  te komen.</p>
+<p>Voorbeeldprompt:<br>
+  <span class="tekstIsCode">#Vraag<br>
+  Wees Socrates. Stel één voor één een vraag tot je een volwaardig antwoord kan  formuleren. <br>
+  <br>
+  #Vraag<br>
+Hoe ontstaat bodemdegradatie door veranderend landgebruik?</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>  <br>
+</p>
+<p><br>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="tekstIsCode">&nbsp;</p>
   <p>&nbsp;</p>
 </body>
 </html>

@@ -11,3 +11,7 @@ body {
 body ul {
 	font-size: 18px;
 }
+
+body ol li {
+	font-size: 18px;
+}

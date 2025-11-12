@@ -37,8 +37,31 @@
   Output: Parijs, de stad van de liefde!<br>
   Input: Wat is de hoofdstad van Italië?<br>
   Output</span>: </p>
+  <p>&nbsp;</p>
+  <h2>4. Sjabloon prompting</h2>
+  <p>Geef een sjabloon mee in je prompt. Op basis van het sjabloon genereert het taalmodel de output. </p>
+  <p><span class="tekstIsCode">Voorbeeldprompt:<br>
+  Ik ga een sjabloon aanleveren voor de output die je genereert.     <br>
+  Dit is het sjabloon:<br>
+[onderwerp],<br>
+[begroeting],<br>
+[pakkende introductie],<br>
+[hoofdinhoud van de email],<br>
+[afsluiting met motiverende aanmoediging]    <br>
+<br>
+Schrijf op basis van dit sjabloon een email om personeelsleden uit te nodigen voor een sessie over AI-prompttechnieken. </span><br>
+  </p>
 <p>&nbsp;</p>
-  <h2>4. Chain-of-thought  </h2>
+<h2>5. Reference prompting </h2>
+<p>Deze techniek houdt in dat het taalmodel wordt gevraagd uitsluitend informatie uit een opgegeven bron of referentie te gebruiken.</p>
+<p class="tekstIsCode">Voorbeeldprompt<br>
+  Zie #Tekst of upload  <br>
+  Gebruik alleen informatie uit #Tekst of upload met exacte citaten en artikelnummers. <br>
+  Geef een antwoord op de vraag {vul hier je vraag aan}  <br>
+#Tekst  {Plaats hier de tekst} </p>
+
+<p>&nbsp;</p>
+<h2>6. Chain-of-thought  </h2>
   <p>Laat het taalmodel <strong>stap-voor-stap beschrijven</strong> hoe het tot  zijn antwoord komt. Handig voor berekeningen of logisch redeneren.</p>
 <p>    Voorbeeldprompt: <br>
   <span class="tekstIsCode">Zie #Vraag<br>
@@ -48,7 +71,7 @@
   <br>
 Ik snap niets van tweedegraagdsvergelijkingen. De vergelijking  (x maal x) min 4 maal x plus 4 is gelijk aan nul zegt mijn leraar wanneer x gelijk is aan 2. Leg het uit want morgen heb ik een toets.</span></p>
 <p>&nbsp;</p>
-<h2>5. Flipped interaction </h2>
+<h2>7. Flipped interaction </h2>
 <p>Een techniek waarbij het taalmodel vragen stelt  in plaats van andersom. Flipped Interaction helpt jouw ideeën beter te begrijpen, stimuleert creatief denken en laat het taalmodel optreden als coach in plaats van antwoordgever. </p>
 <p>Voorbeeldprompt:<br>
   <span class="tekstIsCode">  Zie #Vraag<br>
@@ -57,7 +80,8 @@ Blijf vragen stellen tot ik aangeef dat ik tevreden ben met de uitwerking, het d
 #Vraag<br>
 Hoe ontstaat bodemdegradatie door veranderend landgebruik?</span></p>
 <p>&nbsp;</p>
-<h2>6. Vraagverbeteraar </h2>
+<h2>8. Question refinement pattern 
+</h2>
 <p>Gebruik deze techniek om de vraag te verbeteren. </p>
 <p>Voorbeeldprompt:<br><span class="tekstIsCode">
 Zie #Vraag.<br>
@@ -66,7 +90,7 @@ Ik wil dat je een voorstel doet voor een betere versie van die vraag. Vraag verv
 #Vraag<br>
 Leg uit wat fotosynthese is.</span></p>
 <p>&nbsp;</p>
-<h2>7. Emotioneel prompten </h2>
+<h2>9. Emotion prompting</h2>
 <p>Emotionele prompts verbeteren de output van taalmodellen. </p>
 <p>Voorbeeldprompts: <br>
   <span class="tekstIsCode">Zie #Vraag <br>
@@ -75,7 +99,7 @@ Je antwoord is heel belangrijk voor mijn loopbaan. <br>
 #Vraag<br>
 Waarom begon de Industriële Revolutie in Groot-Brittannië</span>?</p>
 <p>&nbsp;</p>
-<h2>8. Analogisch redeneren </h2>
+<h2>10. Analogisch redeneren </h2>
 <p>Vraag een taalmodel om voorbeelden van vergelijkbare situaties of problemen te geven, zodat een ingewikkeld probleem makkelijker te begrijpen en op te lossen is. </p>
 <p>Werkwijze: </p>
 <ol>
@@ -90,24 +114,29 @@ Bedenk als eerste drie analogieën die illustreren hoe de stelling van Pythagora
 #Vraag <br>
 Help me de stelling van Pythagoras te begrijpen?</span></p>
 <p>&nbsp;</p>
-<h2>9. Templates</h2>
-<p> Maak met het taalmodel een template voor herhaaldelijk gebruik.  </p>
-<p>Voorbeeldprompt: <br>
-  <span class="tekstIsCode">Ik ga een sjabloon aanleveren voor de output die je genereert. <br>
-Dit is het sjabloon:<br>
-[onderwerp],<br>
-[begroeting],<br>
-[pakkende introductie],<br>
-[hoofdinhoud van de email],<br>
-[afsluiting met motiverende aanmoediging] </span></p>
-<p class="tekstIsCode">Schrijf op basis van dit sjabloon een email om personeelsleden uit te nodigen voor een sessie over AI-prompttechnieken. </p>
+<h2>11. Self-Consistency prompting  </h2>
+<p>Met deze prompttechniek laat je het taalmodel meteen  verschillende uitvoeringen geven van dezelfde opdracht. Zo kun je snel en makkelijk vergelijken, combineren of de beste optie kiezen. Ideaal wanneer je twijfelt of meerdere invalshoeken wilt verkennen. </p>
+<p>Voorbeeldprompt:<br>
+  <span class="tekstIsCode">Zie #Vraag<br>
+  Maak een antwoord op basis van de #Vraag. Maak drie verschillende versies. Wees daarna kritische vriend en beoordeel na de uitvoer de drie versies. Welke versie is de allerbeste versie en waarom?<br>
+#Vraag<br>
+Schrijf een korte, vriendelijke e-mail om een ouder te herinneren aan  een openstaande betaling. </span></p>
 <p>&nbsp;</p>
-<h2>10. Reflectietechniek </h2>
+<h2>12. Reflectietechniek </h2>
 <p>Laat een taalmodel reflecteren op zijn eigen uitvoer en suggesties doen ter verbetering.  </p>
 <p>Voorbeeldprompt: <br>
 <span class="tekstIsCode">Maak een tekst over de voordelen van prompt engineering voor marketeers. Reflecteer vervolgens op de output en doe suggesties om de tekst te verbeteren.</span></p>
 <p>&nbsp;</p>
-<h2>11. Factchecker </h2>
+<h2>13. Cognitive Verifier Pattern</h2>
+<p>Het cognitieve verificatiepatroon houdt in dat er een stap wordt toegevoegd waarbij het taalmodel zijn output controleert door de output opnieuw te verifiëren voordat deze wordt gepresenteerd. Deze stap fungeert als een zelfcontrole om ervoor te zorgen dat het antwoord goed aansluit bij de vereisten.</p>
+<p><span class="tekstIsCode">Voorbeeldprompt<br>
+  Zie #Vraag  <br>
+  Bedenk drie aanvullende vragen die helpen om een nauwkeuriger antwoord te geven. Stel de vragen één voor één. Na het beantwoorden van de drie vragen, combineer dan de antwoorden tot één definitief antwoord op de vraag. <br>
+  #Vraag  <br>
+  {Plaats hier de vraag}</span> <br>
+</p>
+<p>&nbsp;</p>
+<h2>14. Factchecker </h2>
 <p>Laat een taalmodel aan het einde van de output een lijst met verifieerbare feiten toevoegen, zodat de inhoud eenvoudiger te controleren is op juistheid. </p>
 <p>Voorbeeldprompt: <br>
   <span class="tekstIsCode">Zie #Vraag <br>
@@ -115,7 +144,12 @@ Voeg onderaan de uitvoer een lijst van feiten toe die aan de uitvoer ten grondsl
 #Vraag <br>
 Leg in maximaal 150 woorden uit waarom Ieper (Ypres) een sleutelplaats was in de Eerste Wereldoorlog. </span></p>
 <p>&nbsp;</p>
-<h2>12. Co-auteur </h2>
+<h2>15. Begrip testen</h2>
+<p> Gebruik deze prompttechniek om  specifieke informatie te  vragen over een bepaald onderwerp en je begrip ervan te toetsen.</p>
+<p>Voorbeeldprompt:<br>
+  <span class="tekstIsCode">Leer mij over het Joule-effect en voeg aan het einde een test toe, maar geef mij niet de antwoorden en vertel me dan of ik de antwoorden goed heb als ik reageer.</span></p>
+<p>&nbsp;</p>
+<h2>16. Co-auteur </h2>
 <p>Gebruik het taalmodel als co-auteur om de authenticiteit van een tekst te waarborgen. </p>
 <p>Voorbeeldprompt:<br>
   <span class="tekstIsCode">Ik ben bezig met het schrijven van een tekst over #Onderwerp. Ik loop vast bij het schrijven van deze #Alinea. Geef me een lijst van 3 suggesties hoe ik verder zou kunnen gaan met schrijven. <br>
@@ -125,35 +159,6 @@ Leg in maximaal 150 woorden uit waarom Ieper (Ypres) een sleutelplaats was in de
 Misleidende posts op sociale media kan je herkennen aan 
 </span></p>
 <p>&nbsp;</p>
-<h2>13. Begrip testen</h2>
-<p> Gebruik deze prompttechniek om  specifieke informatie te  vragen over een bepaald onderwerp en je begrip ervan te toetsen.</p>
-<p>Voorbeeldprompt:<br>
-  <span class="tekstIsCode">Leer mij over het Joule-effect en voeg aan het einde een test toe, maar geef mij niet de antwoorden en vertel me dan of ik de antwoorden goed heb als ik reageer.</span></p>
-<p>&nbsp;</p>
-<h2>14. Twee versies  </h2>
-<p>Met deze prompttechniek laat je het taalmodel meteen twee verschillende uitvoeringen geven van dezelfde opdracht. Zo kun je snel en makkelijk vergelijken, combineren of de beste optie kiezen. Ideaal wanneer je twijfelt of meerdere invalshoeken wilt verkennen. </p>
-<p>Voorbeeldprompt:<br>
-  <span class="tekstIsCode">Zie #Vraag<br>
-  Maak twee verschillende versies. Wees kritische vriend, beoordeel na de uitvoer de twee versies. Welke versie is de beste en waarom?<br>
-#Vraag<br>
-Schrijf een korte, vriendelijke e-mail om een ouder te herinneren aan  een openstaande betaling. Geef me twee verschillende versies om uit te kiezen.</span></p>
-<p>&nbsp;</p>
-<h2>15. Chain-of-Feedback  </h2>
-<p>Met de Chain-of-Feedback (CoF) techniek geef je het taalmodel niet alleen instructies, maar ook gerichte feedback om stapsgewijs betere resultaten te bereiken. Zo leer je het taalmodel om van fouten te leren, in plaats van willekeurig nieuwe antwoorden te genereren.   </p>
-<p>Chain-of-Feedback bestaat uit vier stappen: </p>
-<ol>
-  <li> Vraag om expliciete denkstappen. </li>
-  <li> Identificeer precies waar het misgaat. </li>
-  <li> Geef duidelijke, constructieve feedback. </li>
-  <li> Laat de het taalmodel opnieuw proberen met jouw feedback. </li>
-</ol>
-<p>Voorbeeldprompt: <br>
-  <span class="tekstIsCode">Zie #Vraag <br>
-  Leg stap-voor-stap uit hoe je tot het antwoord komt. <br>
-  #Vraag<br>
-{Plaats hier de vraag}</span></p>
-<p>  Geef na de foute uitvoer duidelijke, constructieve feedback:<br>
-  <span class="tekstIsCode">Je aanpak is goed, maar je zit met een denkfout in stap X. De denkfout is … Herzie dit. </span><br>
-  <br>
-</p>
-<p>&nbsp;</p>
+
+
+

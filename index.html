@@ -170,5 +170,65 @@ Misleidende posts op sociale media kan je herkennen aan
   <br>
   {Plaats hier de vraag} </span></p>
 <p>&nbsp;</p>
+<h2>18. Prompt Chaining   </h2>
+<p>Prompt Chaining is een techniek waarbij je een grote taak verdeelt in kleinere stappen. Het resultaat van de ene prompt gebruik je vervolgens weer als input voor de volgende prompt. Zo ontstaat er een reeks bewerkingen die het eenvoudiger maakt om fouten op te sporen en de uitkomst nauwkeuriger te krijgen. </p>
+<p>Voorbeeldprompt:<br>
+  <span class="tekstIsCode">Stap 1 — Kaders vastleggen (Rubric Expert) <br>
+  #System: Je bent een expert in formatief evalueren en curriculumontwerp. Je vertaalt leerdoelen naar haarscherpe, meetbare criteria.  <br>
+  #User: Zet de onderstaande opdracht en het niveau om naar een controleerbare rubric.  <br>
+  #Regels: De criteria moeten observeerbaar gedrag beschrijven. <br>
+  #Output: Uitsluitend een tabel met de kolommen: Criteria, Leerdoel, Onvoldoende, Matig, Goed, Zeer goed. </span></p>
+<ul>
+  <li><span class="tekstIsCode"> Opdracht: [Opdracht]</span></li>
+  <li><span class="tekstIsCode"> Klas/niveau: [Niveau] </span></li>
+</ul>
+<span class="tekstIsCode">
+Stap 2 — Bronextractie (De Filter)
+<br>
+#User: Extraheer uit de brontekst uitsluitend de fragmenten die strikt noodzakelijk zijn om de opdracht volgens de rubric uit te voeren. 
+<br>
+#Output: Uitsluitend een genummerde lijst tussen
+&lt;quotes&gt; 
+tags. <br>
+#Failsafe: Als er geen relevante informatie is, antwoord dan exact: "GEEN RELEVANTE QUOTES GEVONDEN".
+</span></p>
+<ul>
+  <li><span class="tekstIsCode"> Brontekst: [Brontekst]</span></li>  
+</ul>
+
+<span class="tekstIsCode"><br>
+Stap 3 — Conceptontwikkeling (Met Bronverankering)
+<br>
+#User: Schrijf een conceptuitwerking van de opdracht op basis van de rubric uit Stap 1.<br>
+Regels:<br>
+1.	Gebruik uitsluitend informatie uit de geëxtraheerde &lt;quotes&gt;. <br>
+2.	Voeg na elke alinea een bronverwijzing toe: (Bron: citaat/paragraaf X). <br>
+3.	Schrijf op het doelniveau van de leerling/student.<br>
+</span>
+<span class="tekstIsCode"><br>
+Stap 4 — De Kritische Auditor (De Gatekeeper)<br>
+#System: Je bent een onverbiddelijke auditor voor onderwijskwaliteit. Je controleert teksten op feitelijke juistheid en brongetrouwheid. <br>
+#User: Voer een strenge audit uit op het concept uit Stap 3. Controleer op:<br>
+<ul>
+  <li><span class="tekstIsCode"> Hallucinaties: Bevat de tekst beweringen die niet in de &lt;quotes&gt; staan?</span></li>  
+  <li><span class="tekstIsCode"> Validiteit: Voldoet het concept aan de criteria van de 'Goed/Zeer goed' kolommen uit de rubric?</span></li> 
+  <li><span class="tekstIsCode"> Verantwoording: Ontbreekt er ergens een bronanker?</span></li> 
+</ul>
+#Output: Een checklist met per punt PASS of FAIL. Bij FAIL: geef een concrete "Fix" instructie.
+</span><br>
+<span class="tekstIsCode"><br>
+Stap 5 — Finale Versie & Bron-Advies<br>
+#User: Pas de fixes uit Stap 4 toe en genereer de definitieve output.<br><br>
+
+Regels voor de finale versie:<br><br>
+
+1.	Strikte Bronbeperking: Voeg geen nieuwe feiten toe. Als info ontbreekt voor een rubric-criterium, schrijf dan: "Informatie over [criterium] ontbreekt in de brontekst."<br><br>
+
+2.	Bronankers: Behoud alle verwijzingen naar de &lt;quotes&gt;.<br><br>
+
+3.	Aanvullingsadvies: Indien er informatie ontbreekt om de 'Goed' of 'Zeer goed' score uit de rubric te behalen, voeg dan onderaan een sectie toe genaamd "Aanbevolen Bronuitbreiding". Specificeer hier welke concrete onderwerpen of concepten toegevoegd moeten worden aan de brontekst om de opdracht volledig te dekken.
+</span>
+
+
 
 

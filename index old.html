@@ -38,8 +38,31 @@
   Input: Wat is de hoofdstad van Italië?<br>
   Output</span>: </p>
   <p>&nbsp;</p>
-  <h2>4. Chain-of-thought  </h2>
-<p>Laat het taalmodel <strong>stap-voor-stap beschrijven</strong> hoe het tot  zijn antwoord komt. Handig voor berekeningen of logisch redeneren.</p>
+  <h2>4. Sjabloon prompting</h2>
+  <p>Geef een sjabloon mee in je prompt. Op basis van het sjabloon genereert het taalmodel de output. </p>
+  <p><span class="tekstIsCode">Voorbeeldprompt:<br>
+  Ik ga een sjabloon aanleveren voor de output die je genereert.     <br>
+  Dit is het sjabloon:<br>
+[onderwerp],<br>
+[begroeting],<br>
+[pakkende introductie],<br>
+[hoofdinhoud van de email],<br>
+[afsluiting met motiverende aanmoediging]    <br>
+<br>
+Schrijf op basis van dit sjabloon een email om personeelsleden uit te nodigen voor een sessie over AI-prompttechnieken. </span><br>
+  </p>
+<p>&nbsp;</p>
+<h2>5. Reference prompting </h2>
+<p>Deze techniek houdt in dat het taalmodel wordt gevraagd uitsluitend informatie uit een opgegeven bron of referentie te gebruiken.</p>
+<p class="tekstIsCode">Voorbeeldprompt<br>
+  Zie #Tekst of upload  <br>
+  Gebruik alleen informatie uit #Tekst of upload met exacte citaten en artikelnummers. <br>
+  Geef een antwoord op de vraag {vul hier je vraag aan}  <br>
+#Tekst  {Plaats hier de tekst} </p>
+
+<p>&nbsp;</p>
+<h2>6. Chain-of-thought  </h2>
+  <p>Laat het taalmodel <strong>stap-voor-stap beschrijven</strong> hoe het tot  zijn antwoord komt. Handig voor berekeningen of logisch redeneren.</p>
 <p>    Voorbeeldprompt: <br>
   <span class="tekstIsCode">Zie #Vraag<br>
   Leg stap-voor-stap uit  hoe je tot het antwoord komt.<br>
@@ -48,7 +71,7 @@
   <br>
 Ik snap niets van tweedegraagdsvergelijkingen. De vergelijking  (x maal x) min 4 maal x plus 4 is gelijk aan nul zegt mijn leraar wanneer x gelijk is aan 2. Leg het uit want morgen heb ik een toets.</span></p>
 <p>&nbsp;</p>
-<h2>5. Flipped interaction </h2>
+<h2>7. Flipped interaction </h2>
 <p>Een techniek waarbij het taalmodel vragen stelt  in plaats van andersom. Flipped Interaction helpt jouw ideeën beter te begrijpen, stimuleert creatief denken en laat het taalmodel optreden als coach in plaats van antwoordgever. </p>
 <p>Voorbeeldprompt:<br>
   <span class="tekstIsCode">  Zie #Vraag<br>
@@ -57,7 +80,26 @@ Blijf vragen stellen tot ik aangeef dat ik tevreden ben met de uitwerking, het d
 #Vraag<br>
 Hoe ontstaat bodemdegradatie door veranderend landgebruik?</span></p>
 <p>&nbsp;</p>
-<h2>6. Analogical prompting  </h2>
+<h2>8. Question refinement prompting 
+</h2>
+<p>Gebruik deze techniek om de vraag te verbeteren. </p>
+<p>Voorbeeldprompt:<br><span class="tekstIsCode">
+Zie #Vraag.<br>
+Ik wil dat je een voorstel doet voor een betere versie van die vraag. Vraag vervolgens of ik de verbeterde vraag wil gebruiken of niet.<br>
+<br>
+#Vraag<br>
+Leg uit wat fotosynthese is.</span></p>
+<p>&nbsp;</p>
+<h2>9. Emotion prompting</h2>
+<p>Emotionele prompts verbeteren de output van taalmodellen. </p>
+<p>Voorbeeldprompts: <br>
+  <span class="tekstIsCode">Zie #Vraag <br>
+Je antwoord is heel belangrijk voor mijn loopbaan. <br>
+<br>
+#Vraag<br>
+Waarom begon de Industriële Revolutie in Groot-Brittannië</span>?</p>
+<p>&nbsp;</p>
+<h2>10. Analogical prompting  </h2>
 <p>Vraag een taalmodel om voorbeelden van vergelijkbare situaties of problemen te geven, zodat een ingewikkeld probleem makkelijker te begrijpen en op te lossen is. </p>
 <p>Werkwijze: </p>
 <ol>
@@ -72,35 +114,63 @@ Bedenk eerst drie analogieën op basis van de #Vraag. Gebruik vervolgens de anal
 #Vraag <br>
 Help me de stelling van Pythagoras te begrijpen?</span></p>
 <p>&nbsp;</p>
-<h2>7. Self-consistency prompting  </h2>
+<h2>11. Self-consistency prompting  </h2>
 <p>Met deze prompttechniek laat je het taalmodel meteen  verschillende uitvoeringen geven van dezelfde opdracht. Zo kun je snel en makkelijk vergelijken, combineren of de beste optie kiezen. Ideaal wanneer je twijfelt of meerdere invalshoeken wilt verkennen. </p>
 <p>Voorbeeldprompt:<br>
   <span class="tekstIsCode">Zie #Vraag<br>
   Maak een antwoord op basis van de #Vraag. Maak drie verschillende versies. Wees daarna kritische vriend en beoordeel na de uitvoer de drie versies. Welke versie is de allerbeste versie en waarom?<br>
-  <br>
 #Vraag<br>
 Schrijf een korte, vriendelijke e-mail om een ouder te herinneren aan  een openstaande betaling. </span></p>
 <p>&nbsp;</p>
-<h2>8. Retrieval Practice prompting</h2>
+<h2>12. Reflection prompting </h2>
+<p>Laat een taalmodel reflecteren op zijn eigen uitvoer en suggesties doen ter verbetering.  </p>
+<p>Voorbeeldprompt: <br>
+<span class="tekstIsCode">Maak een tekst over de voordelen van prompt engineering voor marketeers. Reflecteer vervolgens op de output en doe suggesties om de tekst te verbeteren.</span></p>
+<p>&nbsp;</p>
+<h2>13. Self-Verification prompting</h2>
+<p>Deze prompttechniek houdt in dat er een stap wordt toegevoegd waarbij het taalmodel zijn output controleert door de output opnieuw te verifiëren voordat deze wordt gepresenteerd. Deze stap fungeert als een zelfcontrole om ervoor te zorgen dat het antwoord goed aansluit bij de vereisten.</p>
+<p><span class="tekstIsCode">Voorbeeldprompt<br>
+  Zie #Vraag  <br>
+  Bedenk drie aanvullende vragen die helpen om een nauwkeuriger antwoord te geven. Stel de vragen één voor één. Na het beantwoorden van de drie vragen, combineer dan de antwoorden tot één definitief antwoord op de vraag. <br>
+  #Vraag  <br>
+  Maak een lesplan over het begrip steekproevenverdeling volgens het model van Van Gelder</span> <br>
+</p>
+<p>&nbsp;</p>
+<h2>14. Fact Listing prompting </h2>
+<p>Laat een taalmodel aan het einde van de output een lijst met verifieerbare feiten toevoegen, zodat de inhoud eenvoudiger te controleren is op juistheid. </p>
+<p>Voorbeeldprompt: <br>
+  <span class="tekstIsCode">Zie #Vraag <br>
+Voeg onderaan de uitvoer een lijst van feiten toe die aan de uitvoer ten grondslag ligt en mogelijk geverifieerd moeten worden. <br>
+#Vraag <br>
+Leg in maximaal 150 woorden uit waarom Ieper (Ypres) een sleutelplaats was in de Eerste Wereldoorlog. </span></p>
+<p>&nbsp;</p>
+<h2>15. Retrieval Practice prompting</h2>
 <p> Gebruik deze prompttechniek om  specifieke informatie te  vragen over een bepaald onderwerp en je begrip ervan te toetsen.</p>
 <p>Voorbeeldprompt:<br>
-  <span class="tekstIsCode">Zie #Vraag<br>
-  Leer mij over #Vraag en voeg aan het einde een test toe, maar geef mij niet de antwoorden en vertel me dan of ik de antwoorden goed heb als ik reageer.</span></p>
-<p class="tekstIsCode">#Vraag<br>
-Het begrip Joule-effect
-</p>
-<h2>&nbsp;</h2>
-<h2>9. Tree of Thoughts prompting  </h2>
+  <span class="tekstIsCode">Leer mij over het Joule-effect en voeg aan het einde een test toe, maar geef mij niet de antwoorden en vertel me dan of ik de antwoorden goed heb als ik reageer.</span></p>
+<p>&nbsp;</p>
+<h2>16. Co-author prompting </h2>
+<p>Gebruik het taalmodel als co-auteur om de authenticiteit van een tekst te waarborgen. </p>
+<p>Voorbeeldprompt:<br>
+  <span class="tekstIsCode">Ik ben bezig met het schrijven van een tekst over #Onderwerp. Ik loop vast bij het schrijven van deze #Alinea. Geef me een lijst van 3 suggesties hoe ik verder zou kunnen gaan met schrijven. <br>
+  #Onderwerp<br>
+  Mediawijsheid in de klas: omgaan met desinformatie<br>
+#Alinea<br> 
+Misleidende posts op sociale media kan je herkennen aan 
+</span></p>
+<p>&nbsp;</p>
+<h2>17. Tree of Thoughts prompting  </h2>
 <p>ToT geeft het model de mogelijkheid om vooruit te plannen, meerdere opties te overzien en te beslissen welke stap het meest logisch is, net zoals een mens dat zou doen bij het oplossen van een puzzel of het nemen van een complexe beslissing. </p>
 <p>Voorbeeldprompt:<br>
   <span class="tekstIsCode">Zie #Vraag
   <br>
-  Stel je voor dat drie verschillende experts deze vraag beantwoorden. Alle experts schrijven eerst één stap van hun denkwijze op en delen deze vervolgens met de groep. Daarna gaan alle experts door naar de volgende stap, enzovoort. Als een expert zich op enig moment realiseert dat hij of zij fout zit, dan verlaat hij of zij het proces.  </span></p>
-<p><span class="tekstIsCode">  #Vraag
+  Stel je voor dat drie verschillende experts deze vraag beantwoorden. Alle experts schrijven eerst één stap van hun denkwijze op en delen deze vervolgens met de groep. Daarna gaan alle experts door naar de volgende stap, enzovoort. Als een expert zich op enig moment realiseert dat hij of zij fout zit, dan verlaat hij of zij het proces.
   <br>
-  Is artificiële intelligentie een gevaar voor de mensheid</span></p>
+  #Vraag
+  <br>
+  {Plaats hier de vraag} </span></p>
 <p>&nbsp;</p>
-<h2>10. Prompt Chaining   </h2>
+<h2>18. Prompt Chaining   </h2>
 <p>Prompt Chaining is een techniek waarbij je een grote taak verdeelt in kleinere stappen. Het resultaat van de ene prompt gebruik je vervolgens weer als input voor de volgende prompt. Zo ontstaat er een reeks bewerkingen die het eenvoudiger maakt om fouten op te sporen en de uitkomst nauwkeuriger te krijgen. </p>
 <p>Voorbeeldprompt:<br>
   <span class="tekstIsCode">Stap 1 — Kaders vastleggen (Rubric Expert) <br>
